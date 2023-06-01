@@ -67,11 +67,66 @@ nav ul
     padding: 5rem;
 }
 
+#form
+{
+    padding: 12px;
+
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3);
+}
+
+#horas-ctr input
+{
+
+}
+
+#input-ctr
+{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#input-ctr input
+{
+    font-family: sans-serif;
+
+    font-size: 18px;
+    height: 24px;
+
+    border: solid 2px gray;
+    
+    
+}
+
 #logo-img
 {
     width: 6rem;
 }
 
+#print
+{
+    font-size: 18px;
+
+    width: 100px;
+    height: 40px;
+
+    background-color: lightcoral;
+
+    border: none;
+}
+
+#print:hover
+{
+    filter: brightness(0.7);
+    cursor: pointer;
+}
 /* Class and Pseudo-x */
 
 a:link, a:visited
@@ -79,7 +134,7 @@ a:link, a:visited
     color: black;
 }
 
-.btn-alugar {
+.botton-alugar {
     font-size: 15px;
     font-weight: bold;
     background-color: #b5adfd;
@@ -88,6 +143,15 @@ a:link, a:visited
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.aluguel-control
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    flex-basis: 50%;
+    gap: 8px;
+    align-items: center;
 }
 
 .flex-container-1
@@ -100,48 +164,6 @@ a:link, a:visited
     width: 100%;
 
 }
-
-.flex-container-2
-{
-    padding: 4px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-    background-color: aliceblue;
-    height: 80%;
-    width: 35%;
-    align-self: center;
-    align-items: center;
-    gap: 2px;
-}
-
-.flex-container-2-1
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0.5rem;
-    width: 100%;
-}
-
-.flex-container-2-1 div
-{
-    width: 40%;
-}
-
-.flex-container-2-1-2
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-container-right {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-}   
 
 .nav_links 
 {
@@ -172,7 +194,7 @@ a:link, a:visited
     justify-content: left;
     align-items: center;
     padding: 0,1rem;
-    background-color: white;
+    background-color: rgb(251, 251, 251);
 }
 
 .section-footer-flex a
@@ -186,8 +208,8 @@ a:link, a:visited
     font-size: small;
 }
 
-
-
-/* Botôes*/
-
+.value-ctr
+{
+    text-align: center;
+}
 

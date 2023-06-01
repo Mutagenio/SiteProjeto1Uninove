@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarDrive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css">
+    <script defer src="js/page.js"></script>
+</head>
+
+<body>
+    <header id="core-header">
+        <img id="logo-img" src="graphics/logo.png">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">INÍCIO</a></li>
+                <li><a href="list.html">ESTACIONAMENTO</a></li>
+                <li><a href="#">SOBRE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="core-main">
+            <div class="flex-container-1">
+                <img id="img">
+                <div class="flex-container-2">
+                    <p id="address"></p>
+                    <div class="flex-container-2-1">
+                        <div class="flex-container-2-1-1">
+                            <p id="servicos" ></p>
+                            <p id="one-hour"></p>
+                            <p  id="two-hour"></p>
+                            <p  id="add-hour"></p>
+                            <p  id="vagas"></p>
+                            <a id="map-a" target="_blank" class="botton-alugar">Localização</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="description">
+                <h1>SOBRE</h1>
+                <p id="description-text"></p>
+            </div>
+            <form id="form" action="#">
+                <div id="input-ctr">
+                    <div class="aluguel-control left" >
+                        <label for="name">Nome</label>
+                        <input type="text" id="name">
+                        <label for="placa-carro">Placa do Carro</label>
+                        <input type="text" id="placa-carro">
+                        <label for="car-model">Modelo do Carro</label>
+                        <input type="text" id="car-model">
+                    </div>
+                    <div class="aluguel-control right">
+                        <label for="name">Documento</label>
+                        <input type="text" id="document">
+                        <label for="data">Data</label>
+                        <input type="date" id="data">
+                        <div id="horas-ctr">
+                            <label for="horas">Horas</label>
+                            <input type="number" id="horas" min="1" max="24" size="2">
+                        </div>
+                        <div id="value-ctr">
+                            <label for="valor">Valor</label>
+                            <span id="valor"></span>
+                        </div>
+                    </div>
+                </div>
+                <button id="print">Alugar</button>
+            </form>
+
+            
+    </main>
+    <footer>
+        <section class="section-footer-flex">
+            <img class="img-content" src="graphics/home_estacionamento.png">
+            <a href="#">License</a>
+            <div class="section-footer-div-flex">
+                <img class="img-content" src="graphics/icone_insta.png">
+                <img class="img-content" src="graphics/icone_face.png">
+                <img class="img-content" src="graphics/icone_twiter.png">
+            </div>
+        </section>
+        <section class="section-footer-flex">
+            <p>CarDrive Estacionamento 24h / CNPJ: 00.000.000/0000-00 / ENDEREÇO - RUA *******************, São Paulo,
+                SP - 00000-000 / Contato 22222-222</p>
+        </section>
+    </footer>
+</body>
+
+</html>

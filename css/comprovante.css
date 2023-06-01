@@ -1,0 +1,49 @@
+body 
+{
+    width: 800px;
+    height: 100px;
+    margin: auto;
+    padding: 0;
+}
+
+main 
+{
+    font-size: large;
+}
+
+/* ID */
+
+#mid-low 
+{
+    display: flex;
+    gap: 50px;
+}
+
+#mid-mid 
+{
+    display: flex;
+    gap: 50px;
+}
+
+#bot 
+{
+    border-top: 3px black dashed; 
+}
+
+/* CLASS */
+
+.top
+{
+    font-size: 13px;
+    text-align: center;
+}
+
+.border 
+{
+    border-bottom: 3px black dashed;
+}
+
+.modelo 
+{
+    border-bottom: 3px black dashed;
+}

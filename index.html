@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/data.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
@@ -18,53 +20,24 @@
         <img id="logo-img" src="graphics/logo.png">
         <nav>
             <ul class="nav_links">
-                <li><a href="#">INÍCIO</a></li>
+                <li><a href="index.html">INÍCIO</a></li>
                 <li><a href="list.html">ESTACIONAMENTO</a></li>
                 <li><a href="#">SOBRE</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <header id="content-header">
             <video id="header-video" src="graphics/video-estacionamento2.mp4" autoplay loop muted></video>
             <p id="welcome-msg"><span id="header-first-word">Estacione</span> suas preocupações conosco.</p>
         </header>
         <section id="core-container">
+            <p>Recomendações</p>
             <div id="flex-slide-container">
-                <p>Recomendações</p>
                 <div id="flex-slide">
-                    <button id="left-btn-slide" class="btn-slide">&#9668;</button>
-                    <div class="space-preview-flex">
-                        <p class="space-preview-title">Av. Cruzeiro do Sul, n°3345 Santana</p>
-                        <p class="space-preview-price">1 Hora - R$10,00</p>
-                        <p class="space-preview-price">2 Hora - R$20,00</p>
-                        <p class="space-preview-price">Por Hora Adicional - R$5,00</p>
-                        <img class="space-preview-img" src="graphics/Estacionamento1.png"> 
-                    </div>
-                    <div class="space-preview-flex">
-                        <p class="space-preview-title">Av. Cruzeiro do Sul, n°3345 Santana</p>
-                        <p class="space-preview-price">1 Hora - R$10,00</p>
-                        <p class="space-preview-price">2 Hora - R$20,00</p>
-                        <p class="space-preview-price">Por Hora Adicional - R$5,00</p>
-                        <img class="space-preview-img" src="graphics/Estacionamento1.png"> 
-                    </div>
-                    <div class="space-preview-flex">
-                        <p class="space-preview-title">Av. Cruzeiro do Sul, n°3345 Santana</p>
-                        <p class="space-preview-price">1 Hora - R$10,00</p>
-                        <p class="space-preview-price">2 Hora - R$20,00</p>
-                        <p class="space-preview-price">Por Hora Adicional - R$5,00</p>
-                        <img class="space-preview-img" src="graphics/Estacionamento1.png"> 
-                    </div>
-                    <div class="space-preview-flex">
-                        <p class="space-preview-title">Av. Cruzeiro do Sul, n°3345 Santana</p>
-                        <p class="space-preview-price">1 Hora - R$10,00</p>
-                        <p class="space-preview-price">2 Hora - R$20,00</p>
-                        <p class="space-preview-price">Por Hora Adicional - R$5,00</p>
-                        <img class="space-preview-img" src="graphics/Estacionamento1.png"> 
-                    </div>
-                    <button id="right-btn-slide" class="btn-slide">&#9658;</button>
                 </div>
+                <button id="btn-slide-left" class="btn-slide">&#9668;</button>
+                <button id="btn-slide-right" class="btn-slide">&#9658;</button>
             </div>
             <div id="flex-content-container">
                 <section id="flex-content-1">
@@ -102,9 +75,9 @@
                 <img class="img-content" src="graphics/home_estacionamento.png">
                 <a href="#">License</a>
                 <div class="section-footer-div-flex">
-                    <img class="img-content" src="graphics/icone_insta.png">
-                    <img class="img-content" src="graphics/icone_face.png">
-                    <img class="img-content" src="graphics/icone_twiter.png">
+                    <a href="https://www.instagram.com" target="_blank"><img class="img-content" src="graphics/icone_insta.png"></a>
+                    <a href="https://www.facebook.com/manuel.vinicius.26" target="_blank"><img class="img-content" src="graphics/icone_face.png"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img class="img-content" src="graphics/icone_twiter.png"></a>
                 </div>
             </section>
             <section class="section-footer-flex">
@@ -114,5 +87,4 @@
         </footer>
     </main>
 </body>
-
 </html>
