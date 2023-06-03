@@ -13,7 +13,7 @@ main
 
 /* ID */
 
-#mid-low 
+.flex-ctr 
 {
     display: flex;
     gap: 50px;

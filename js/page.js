@@ -12,21 +12,56 @@ const mapAnchorElem = document.getElementById("map-a");
 const params = new URLSearchParams(window.location.search);
 const estacionamento = JSON.parse(params.get("data"));
 
-imgElem.src = estacionamento.imgPath;
-addressElem.innerHTML = estacionamento.address;
-servicosElem.innerHTML = `Serviços Oferecidos: ${estacionamento.servicos.toString()}`;
-oneHourElem.innerHTML = `1 Hora - R$${estacionamento.preco[0]}`;
-twoHourElem.innerHTML = `2 Hora - R$${estacionamento.preco[1]}`;
-addHourElem.innerHTML = `Por Hora Adicional - R$${estacionamento.preco[2]}`;
-vagasElem.innerHTML = `${estacionamento.vagasOcupadas}/${estacionamento.vagasMax} Ocupadas`;
-descriptionTextElem.innerHTML = estacionamento.descricao;
-mapAnchorElem.href = `https://maps.google.com/?q=${encodeURIComponent(estacionamento.address)}`;
+const nomeElem = document.getElementById("name");
+const placaElem = document.getElementById("placa-carro");
+const modelElem = document.getElementById("car-model");
+const documentElem = document.getElementById("document");
+const valorElem = document.getElementById("valor");
+const aluguelDateElem = document.getElementById("data");
 
+initLayout();
 
 document.getElementById("print").addEventListener("click", ()=>
 {
+
+  if (!valorElem.innerHTML)
+  {
+    return;
+  }
   printPage("http://127.0.0.1:5500/comprovante.html");
 });
+
+document.getElementById("horas").addEventListener("input", (event)=>
+{
+  const target = event.target;
+  const horas = Number(target.value);
+
+  if (horas === 1)
+  {
+    valorElem.innerHTML = `R$ ${estacionamento.preco[0]}`;
+  }
+  else if (horas === 2)
+  {
+    valorElem.innerHTML = `R$ ${estacionamento.preco[1]}`;
+  }
+  else
+  {
+    valorElem.innerHTML = `R$ ${estacionamento.preco[1] + (horas - 2) * estacionamento.preco[2]}`;
+  }
+});
+
+function initLayout()
+{
+  imgElem.src = estacionamento.imgPath;
+  addressElem.innerHTML = estacionamento.address;
+  servicosElem.innerHTML = `Serviços Oferecidos: ${estacionamento.servicos.toString()}`;
+  oneHourElem.innerHTML = `1 Hora - R$${estacionamento.preco[0]}`;
+  twoHourElem.innerHTML = `2 Hora - R$${estacionamento.preco[1]}`;
+  addHourElem.innerHTML = `Por Hora Adicional - R$${estacionamento.preco[2]}`;
+  vagasElem.innerHTML = `${estacionamento.vagasOcupadas}/${estacionamento.vagasMax} Ocupadas`;
+  descriptionTextElem.innerHTML = estacionamento.descricao;
+  mapAnchorElem.href = `https://maps.google.com/?q=${encodeURIComponent(estacionamento.address)}`;
+}
 
 //< snipppet from <<https://developer.mozilla.org/en-US/docs/Web/Guide/Printing>> (2023)
 function closePrint() {
@@ -41,15 +76,22 @@ function setPrint() {
 
   const frameDocument = this.contentWindow.document;
 
-  const enderecoElem = frameDocument.querySelector(".endereco");
-  const placaElem = frameDocument.querySelector(".placa");
-  const modeloElem = frameDocument.querySelector(".modelo");
-  const codBarrasElem = frameDocument.querySelector(".codigo-barras");
-  const dateElem = frameDocument.querySelector(".date");
-  const valorElem = frameDocument.querySelector(".valor");
+  const frameEnderecoElem = frameDocument.querySelector(".endereco");
+  const framePlacaElem = frameDocument.querySelector(".placa");
+  const frameModeloElem = frameDocument.querySelector(".modelo");
+  const frameCodBarrasElem = frameDocument.querySelector(".codigo-barras");
+  const frameAluguelDateElem = frameDocument.querySelector(".aluguel-date");
+  const frameDateElem = frameDocument.querySelector(".date");
+  const frameValorElem = frameDocument.querySelector(".valor");
+  const frameDocumentElem = frameDocument.querySelector("#bot");
 
-  enderecoElem.innerHTML = estacionamento.address;
-  dateElem.innerHTML = Date();
+  frameEnderecoElem.innerHTML = `Estacionamento: ${estacionamento.address}`;
+  framePlacaElem.innerHTML = `Placa do carro: ${placaElem.value}`;
+  frameModeloElem.innerHTML = `Modelo do carro: ${modelElem.value}`;
+  frameAluguelDateElem.innerHTML = aluguelDateElem.value;
+  frameDateElem.innerHTML = Date();
+  frameValorElem.innerHTML = valorElem.innerHTML;
+  frameDocumentElem.innerHTML = `Documento: ${documentElem.value}`;
 
   this.contentWindow.focus(); // Required for IE
   this.contentWindow.print();

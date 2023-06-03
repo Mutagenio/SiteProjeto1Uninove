@@ -15,9 +15,9 @@
         <img id="logo-img" src="graphics/logo.png">
         <nav>
             <ul class="nav_links">
-                <li><a href="#">INÍCIO</a></li>
+                <li><a href="index.html">INÍCIO</a></li>
                 <li><a href="list.html">ESTACIONAMENTO</a></li>
-                <li><a href="#">SOBRE</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
             </ul>
         </nav>
     </header>
@@ -54,21 +54,19 @@
                         <input type="text" id="car-model">
                     </div>
                     <div class="aluguel-control right">
-                        <label for="name">Documento</label>
+                        <label for="name">RG/CPF</label>
                         <input type="text" id="document">
                         <label for="data">Data</label>
                         <input type="date" id="data">
-                        <div id="horas-ctr">
-                            <label for="horas">Horas</label>
+                        <label for="horas">Horas</label>
                             <input type="number" id="horas" min="1" max="24" size="2">
-                        </div>
-                        <div id="value-ctr">
-                            <label for="valor">Valor</label>
-                            <span id="valor"></span>
-                        </div>
                     </div>
                 </div>
-                <button id="print">Alugar</button>
+                <div id="value-ctr">
+                    <label for="valor">Total a pagar</label>
+                    <span id="valor"></span>
+                </div>
+                <button type="button" id="print">Alugar</button>
             </form>
 
             
@@ -76,7 +74,7 @@
     <footer>
         <section class="section-footer-flex">
             <img class="img-content" src="graphics/home_estacionamento.png">
-            <a href="#">License</a>
+            <a href="#">licença</a>
             <div class="section-footer-div-flex">
                 <img class="img-content" src="graphics/icone_insta.png">
                 <img class="img-content" src="graphics/icone_face.png">
@@ -85,7 +83,7 @@
         </section>
         <section class="section-footer-flex">
             <p>CarDrive Estacionamento 24h / CNPJ: 00.000.000/0000-00 / ENDEREÇO - RUA *******************, São Paulo,
-                SP - 00000-000 / Contato 22222-222</p>
+                SP - 00000-000 / Contato 2222-2222</p>
         </section>
     </footer>
 </body>
