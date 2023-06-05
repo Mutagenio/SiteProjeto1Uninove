@@ -14,7 +14,6 @@ Foi elaborado durante o primeiro semestre de 2023 para a Uninove, no curso de An
 
 CarDrive está disponível sob dual-licesing e pode ser licensiado sob BSD-3 ou CC0.
 
-
 ## Disclaimer
 
 This software library is not affiliated with or endorsed by the authors of the third-party libraries, other resources or by sources used as inspiration that were used in its implementation.
