@@ -28,7 +28,7 @@ document.getElementById("print").addEventListener("click", ()=>
   {
     return;
   }
-  printPage("http://127.0.0.1:5500/comprovante.html");
+  printPage("https://cardrive24h.netlify.app/comprovante.html");
 });
 
 document.getElementById("horas").addEventListener("input", (event)=>

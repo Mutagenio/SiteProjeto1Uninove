@@ -2,7 +2,7 @@
 
 # CarDrive
 
-CarDrive é uma solução para gerenciar o aluguel de vagas de automóteis em São Paulo, provendo uma interface simples para os clientes.
+CarDrive é uma solução para gerenciar o aluguel de vagas de automóteis em São Paulo, provendo uma interface simples para os clientes. [Acessar site] (https://cardrive24h.netlify.app/index.html)
 
 Foi elaborado durante o primeiro semestre de 2023 para a Uninove, no curso de Análise de sistemas.
 
